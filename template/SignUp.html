@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'>
+    <title>Sign Up</title>
+</head>
+<style>
+    @font-face {
+        font-family: ArsenicaTrial;
+        src: url(fonts/ArsenicaTrial-Regular.ttf) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: ArsenicaTrial-Bold;
+        src: url(fonts/ArsenicaTrial-Bold.ttf) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .header{
+        font-family: ArsenicaTrial-Bold;
+        font-weight: normal;
+        text-align: center;
+        font-size: 2.5em;
+        color:#c7b518;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    body{
+        font-family: Garamond;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+        background-image: url('images/iknowwhatyouaredoing.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content{
+        width: 400px;
+        text-align: left;
+    }
+
+    .inputbox{
+        padding-left: 10px;
+        width: 400px;
+        background-color: #011b05;
+        text-align: left;
+        margin-top: 5px;
+        border: 2px solid #c7b518;
+        overflow: hidden;
+        display: flex;
+        padding: 0 10px;
+        font-family: Garamond;
+    }
+
+    input, select{
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 10px;
+        background: transparent;
+        margin-top: 1px;
+        font-size: 1rem;
+        color: #c7b518;
+        font-family: Garamond;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .bold{
+        font-weight: bold;
+        margin-bottom: 0;
+        color:#c7b518;
+        font-size: 1.15em;
+        padding: 0;
+    }
+
+    .signup{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 120px;
+    }
+
+    .signup p{
+        margin: 0 5px;
+    }
+
+    .faded{
+        color: #D3D3D3;
+        margin: 0;
+        text-align: center;
+    }
+
+    .register-button{
+        width: 100%;
+        border: none;
+        background: none;
+        padding: 30px;
+        cursor: pointer;
+        color: #c7b518;
+        font-family: Garamond;
+        font-size: 1.5em;
+        text-decoration: none;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .register-button::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        height: 2px;
+        width: 0%;
+        background-color: #c7b518;
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        transform: translateX(-50%);
+        bottom: 10px;
+    }
+
+    .register-button:hover::after{
+        width: 100%;
+    }
+
+    .line{
+        text-align: left;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .placeholder{
+        font-family: Garamond;
+    }
+
+</style>
+<body>
+    
+    <div class="container">
+        <div class="content">
+            <h1 class="header">SIGN UP</h1>
+            <p class="bold">Name</p>
+            <div class="inputbox">
+                <input type="text" name="name" required>
+            </div>
+        
+            <p class="bold">Email</p>
+            <div class="inputbox">
+                <input type="text" name="email" required>
+            </div>
+        
+            <p class="bold">Password</p>
+            <div class="inputbox">
+                <input type="text" name="password" required>
+            </div>
+        
+            <p class="bold">Confirm Password</p>
+            <div class="inputbox">
+                <input type="text" name="confirm_password" required>
+            </div>
+        
+            <div class="registerbox">
+                <button type="submit" class="register-button">Register</button>
+            </div>
+            <p class="faded">Have an account? Sign In</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
